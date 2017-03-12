@@ -45,14 +45,14 @@ class SignupForm extends Component {
       <div>
         <AuthForm 
           formName="Sign Up"
-          errors={this.state.errors}
           onSubmit={this.onSubmit.bind(this)}
+          errors={this.state.errors}
         />
       </div>
     );
   }
 }
 
-export default graphql(query)(
-  graphql(mutation)(SignupForm)
+export default graphql(mutation)(
+  graphql(query)(SignupForm)
 );
